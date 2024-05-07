@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PrepaAcademie</title>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+            rel="stylesheet"
+    />
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+    ></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 16px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">PrepaAcademie</a>
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/"
+                           role="button">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" onclick="scrollToDiv('section') " role="button">Section</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" onclick="scrollToDiv('contact')" role="button">Contact
+                            Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" onclick="scrollToDiv('about')" role="button">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div
+            id="home"
+            class="p-5 text-center bg-image"
+            style="
+      background-image: url('/static/images/home.jpg');
+      height: 500px;
+margin: 20px;
+border-radius: 10px;
+    "
+    >
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">PrepaAcademie</h1>
+                    <h4 class="mb-3">donnez-vous toutes les chances de reussir</h4>
+                    <a class="btn btn-outline-light btn-lg" onclick="scrollToDiv('section')" role="button"
+                    >commencer</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="section" class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <h2>Section</h2>
+</section>
+<div style="padding: 20px">
+    <div class="hr">
+        <div class="d-flex ">
+            <div class="card text-center" style="margin: 20px;width: 50%">
+                <div class="card">
+                    <h5 class="card-header">Cours & Probleme</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">MPSI-MP</h5>
+                        <p class="card-text">MPSI (Mathématiques, Physique et Sciences de l'Ingénieur) - MP
+                            (Mathématiques et Physique)</p>
+                        <a href="/section/mpsi-mp" class="btn btn-primary" style="width: 50%">Afficher</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-center" style="margin: 20px;width: 50%">
+                <div class="card">
+                    <h5 class="card-header">Cours & Probleme</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">PCSI-PSI</h5>
+                        <p class="card-text">PCSI (Physique, Chimie et Sciences de l'Ingénieur) - PSI (Physique et
+                            Sciences
+                            de
+                            l'Ingénieur)</p>
+                        <a href="/section/pcsi-psi" class="btn btn-primary" style="width: 50%">Afficher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="card text-center" style="margin: 20px;width: 50%">
+                <div class="card">
+                    <h5 class="card-header">Cours & Probleme</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">TSI</h5>
+                        <p class="card-text">TSI (Technologie et Sciences de l'Ingénieur)</p>
+                        <a href="/section/tsi" class="btn btn-primary" style="width: 50%">Afficher</a>
+                    </div>
+                </div>
+            </div>
+           <div class="card text-center" style="margin: 20px;width: 50%">
+                <div class="card">
+                    <h5 class="card-header">Cours & Probleme</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">CONCOURS</h5>
+                        <p class="card-text"></p>
+                        <a href="/concours" class="btn btn-primary" style="width: 50%">Afficher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+             <div class="card text-center" style="margin: 20px;width: 50%">
+                <div class="card">
+                    <h5 class="card-header">Cours & Probleme</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">TIPE</h5>
+                        <p class="card-text">tipe</p>
+                        <a href="/tipe" class="btn btn-primary" style="width: 50%">Afficher</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-center" style="margin: 20px;width: 50%">
+                <div class="card">
+                    <h5 class="card-header">Cours & Probleme</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">LES LIGNES</h5>
+                        <p class="card-text">les lignes</p>
+                        <a href="/lignes" class="btn btn-primary" style="width: 50%">Afficher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<section id="contact" class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <h2>Contact US</h2>
+</section>
+<div style="padding: 40px;">
+    <form method="post">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+            <label for="email">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+                <textarea class="form-control" name="message" placeholder="Leave a comment here"
+                          id="message" style="height: 100px"></textarea>
+            <label for="message">Comments</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%">envoyer</button>
+    </form>
+</div>
+<footer id="about" class="text-center text-lg-start bg-dark text-muted" style="padding: 5px">
+
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>PrepaAcademie
+                    </h6>
+                    <p>
+                        PrépaAcadémie est la première plateforme en ligne pour les étudiants préparatoires au Maroc, en
+                        France et en Tunisie. Des cours sur mesure, une interface conviviale et la flexibilité
+                        d'apprentissage personnalisé permettent aux étudiants d'exceller et de libérer leur plein
+                        potentiel académique. Rejoignez-nous pour ouvrir la voie à votre réussite scolaire.
+                    </p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Section
+                    </h6>
+                    <p>
+                        <a href="/section/mpsi-mp" class="text-reset">MPSI-MP</a>
+                    </p>
+                    <p>
+                        <a href="/section/pcsi-psi" class="text-reset">PCSI-PSI</a>
+                    </p>
+                    <p>
+                        <a href="/section/tsi" class="text-reset">TSI</a>
+                    </p>
+                    <p>
+                        <a href="/concours" class="text-reset">CONCOURS</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        prepaacademie@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold">PrepaAcademie</a>
+    </div>
+</footer>
+</body>
+</html>
